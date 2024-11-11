@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "outDir": "./lib",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "module": "commonjs",
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["esnext"],           // Only include necessary libraries (remove 'dom')
+    "esModuleInterop": true,
+    "skipLibCheck": true,         // Skips type checks for declaration files, which can avoid conflicts
+    "strict": true
+  },
+  "include": ["src"]
+}
