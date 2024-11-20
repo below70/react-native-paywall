@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+### [0.9.6] - 2024-11-21
+
+#### Added
+
+- Screenshots of paywalls (`Istanbul Paywall` and `London Paywall`) to the README for better visualization of the components.
+
+---
+
 ### [0.9.5] - 2024-11-11
 
 #### Added

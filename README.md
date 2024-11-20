@@ -1,4 +1,3 @@
-
 # react-native-paywall
 
 A customizable paywall component for React Native applications, supporting multiple paywalls and dynamic product selection.
@@ -23,6 +22,22 @@ yarn add react-native-safe-area-context
 
 You will need to link this dependency if you haven't already done so.
 
+## Screenshots
+
+### Istanbul Paywall
+
+The Istanbul paywall showcases a sleek design optimized for clear pricing and user engagement.
+
+![Istanbul Paywall](https://firebasestorage.googleapis.com/v0/b/archy-b1171.appspot.com/o/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-11-21%20at%2000.55.51.png?alt=media&token=244e2064-7ebd-4695-bac2-48d431a3c834 'Istanbul Paywall')
+
+---
+
+### London Paywall
+
+The London paywall focuses on subscription options with visually distinct plans for better user understanding.
+
+![London Paywall](https://firebasestorage.googleapis.com/v0/b/archy-b1171.appspot.com/o/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20Max%20-%202024-11-21%20at%2000.56.03.png?alt=media&token=95bb684e-5630-4fe3-8d11-228438d87771 'London Paywall')
+
 ## Usage
 
 Import the `usePaywall` hook and `Paywall` component into your project and use them to display paywall screens in your React Native application.
@@ -44,7 +59,6 @@ const App = () => {
 
       {/* Render the paywall component */}
       <PaywallComponent
-        type="istanbul" // Specify the paywall type here
         onContinue={(selectedIndex) => {
           console.log(`User continued with plan index: ${selectedIndex}`);
           hidePaywall();
@@ -54,24 +68,24 @@ const App = () => {
         buttonText="Subscribe Now"
         products={[
           {
-            identifier: "$rc_monthly",
+            identifier: '$rc_monthly',
             product: {
-              title: "Monthly Plan",
-              priceString: "$4.99",
+              title: 'Monthly Plan',
+              priceString: '$4.99',
             },
           },
           {
-            identifier: "$rc_annual",
+            identifier: '$rc_annual',
             product: {
-              title: "Annual Plan",
-              priceString: "$39.99",
+              title: 'Annual Plan',
+              priceString: '$39.99',
             },
           },
         ]}
         imageComponent={
           <Image
             source={{
-              uri: "https://example.com/image.jpg",
+              uri: 'https://example.com/image.jpg',
             }}
           />
         }
@@ -111,9 +125,6 @@ export default App;
 ### Props
 
 The `Paywall` component accepts the following props:
-
-- **`type`**: `string`  
-  Specifies the type of paywall to display. Can be used to differentiate between different paywalls in the same app (e.g., `istanbul` or `london`).
 
 - **`visible`**: `boolean`  
   Controls whether the paywall is visible.
@@ -177,7 +188,7 @@ The `Paywall` component accepts the following props:
 
 ### Managing Multiple Paywalls
 
-To manage multiple paywalls, you can differentiate each paywall by passing a unique `type` value (e.g., `istanbul` or `london`). In the `PaywallComponent`, use the `type` to specify which paywall to show. 
+To manage multiple paywalls, you can differentiate each paywall by passing a unique `type` value (e.g., `istanbul` or `london`). In the `PaywallComponent`, use the `type` to specify which paywall to show.
 
 ### Example for Multiple Paywalls
 
@@ -191,10 +202,16 @@ const App = () => {
   return (
     <>
       {/* Button to show Istanbul paywall */}
-      <Button title="Show Istanbul Paywall" onPress={() => showPaywall('istanbul')} />
+      <Button
+        title="Show Istanbul Paywall"
+        onPress={() => showPaywall('istanbul')}
+      />
 
       {/* Button to show London paywall */}
-      <Button title="Show London Paywall" onPress={() => showPaywall('london')} />
+      <Button
+        title="Show London Paywall"
+        onPress={() => showPaywall('london')}
+      />
 
       {/* Istanbul Paywall Component */}
       <PaywallComponent
