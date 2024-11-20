@@ -1,6 +1,6 @@
 {
   "name": "react-native-paywall",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "A customizable paywall component for React Native applications",
   "main": "lib/index.js",
   "module": "lib/index.js",
@@ -25,12 +25,11 @@
   ],
   "author": "Bilal Demirer",
   "license": "MIT",
-"peerDependencies": {
-  "react": "^18.0.0",
-  "react-native": ">=0.70.0 <0.77.0",
-  "react-native-safe-area-context": "^4.5.0"
-
-},
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-native": ">=0.70.0 <0.77.0",
+    "react-native-safe-area-context": "^4.5.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.25.9",
     "@babel/preset-env": "^7.26.0",
